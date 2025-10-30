@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="text/javascript" src="rpc.js" ></script>
+  <script type="text/javascript" src="server.js" ></script>
+  </head>
+  <body>
+    <h1>Go Memorizer</h1>
+    <h8>many stones: </h8>
+    <INPUT type="text" id="many_rocks" value="6"></INPUT>
+    <br />
+    <h8>seconds: </h8>
+    <INPUT type="text" id="seconds" value="10"></INPUT>
+    <input type="button" id="new_problem" value="new problem"></input>
+    <br />
+    <input type="button" id="check" value="check answer"></input>
+    <br />
+    <canvas id="myCanvas" width="1050" height="850">
+      <img id="black" src="black.png">
+      <img id="empty" src="empty.png">
+      <img id="star" src="star.png">
+      <img id="white" src="white.png">
+      <img id="mark" src="mark.png">
+    </canvas>
+  </body>
+  <script type="text/javascript" src="board.js" ></script>
+</html>

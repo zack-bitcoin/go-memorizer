@@ -1,0 +1,18 @@
+{application, go_memorizer,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {go_memorizer_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    ssl,
+    inets,
+    cowboy,
+    compiler
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {links, []}
+ ]}.
