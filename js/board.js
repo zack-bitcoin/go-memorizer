@@ -17,8 +17,10 @@ var new_problem_button = document.getElementById("new_problem");
 var many_rocks = document.getElementById("many_rocks");
 var seconds = document.getElementById("seconds");
 var check_button = document.getElementById("check");
+var result_message = document.getElementById("result");
 
 new_problem_button.onclick = async function(){
+    result_message.innerHTML = "";
     var x = await rpc.apost([]);
     load_the_board(x, many_rocks.value);
 }
@@ -36,6 +38,8 @@ check_button.onclick = async function(){
         }
     }
     if(all_good == 1){
+        console.log("perfect message");
+        result_message.innerHTML = "Perfect!";
     }
 }
 
