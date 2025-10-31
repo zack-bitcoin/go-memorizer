@@ -138,7 +138,7 @@ function load_the_board(s, many){
     for(i=1; i<=lim; i++){
         l1 = moves[i].substring(0, 1);
         l2 = moves[i].substring(1, 2);
-        board[letter2number(l1)-1][letter2number(l2)-1] = (i % 2)+1;
+        board[letter2number(l1)-1][letter2number(l2)-1] = ((i+1) % 2)+1;
     }
     copy_answer();
     draw_board();
