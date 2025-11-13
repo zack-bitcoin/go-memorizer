@@ -19,6 +19,8 @@ var seconds = document.getElementById("seconds");
 var check_button = document.getElementById("check");
 var result_message = document.getElementById("result");
 
+var round = 0
+
 new_problem_button.onclick = async function(){
     result_message.innerHTML = "";
     var x = await rpc.apost([]);
@@ -142,8 +144,12 @@ function load_the_board(s, many){
     }
     copy_answer();
     draw_board();
+    round += 1;
+    var this_round = round;
     setTimeout(function(){
-        empty_the_board();
+        if(round == this_round){
+            empty_the_board();
+        }
     }, (1000 * seconds.value));
 }
 
